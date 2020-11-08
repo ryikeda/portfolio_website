@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Box,
   Card,
   CardActionArea,
   CardContent,
@@ -7,10 +8,12 @@ import {
   Typography,
 } from "@material-ui/core";
 
+import Icon from "./Icon";
+
 const ProjectCard = ({ data: { name, title, description, techStack } }) => {
   return (
     <Grid item sm={6}>
-      <Card>
+      <Card square>
         <CardActionArea>
           <CardContent>
             <Typography gutterBottom variant="h6" component="h2">
@@ -25,6 +28,11 @@ const ProjectCard = ({ data: { name, title, description, techStack } }) => {
               color="textPrimary"
               component="p"
             ></Typography>
+            <Box mt={1}>
+              {techStack.map((tech, i) => {
+                return <Icon type={tech} width={20} key={i} />;
+              })}
+            </Box>
           </CardContent>
         </CardActionArea>
       </Card>

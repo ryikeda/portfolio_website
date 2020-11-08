@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Card,
-  CardActionArea,
-  CardContent,
-  Grid,
-  Typography,
-} from "@material-ui/core";
+import { Box, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { PROJECTS } from "./sharedData/PROJECTS";
 import ProjectCard from "./ProjectCard";
