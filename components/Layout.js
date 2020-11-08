@@ -37,7 +37,7 @@ const Layout = (props) => {
     <ThemeProvider theme={theme}>
       <ScopedCssBaseline />
       <Navbar mode={mode} setMode={setMode} />
-      <Container>
+      <Container maxWidth="md">
         <div>{props.children}</div>
         <Footer />
       </Container>
