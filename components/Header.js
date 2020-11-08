@@ -17,9 +17,6 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(5),
     color: theme.palette.grey[600],
   },
-  textTransition: {
-    display: "inline-block",
-  },
 }));
 const Header = () => {
   const classes = useStyles();
@@ -42,7 +39,7 @@ const Header = () => {
           <TextTransition
             text={ACTIONS[index % ACTIONS.length]}
             springConfig={config.gentle}
-            className={classes.textTransition}
+            style={{ display: "inline-block" }}
           />
         </Typography>
         <Box component="div" className={classes.headerText}>
@@ -50,7 +47,7 @@ const Header = () => {
             Hi there and welcome 👋🏻.
             <br />
             I'm a full-stack engineer based in Tokyo. It always amazes me how
-            when can solve real problems with code, in fact that's one of the
+            when can solve real problems with code, in fact it's one of the
             reasons that led me to this path.
           </Typography>
         </Box>
