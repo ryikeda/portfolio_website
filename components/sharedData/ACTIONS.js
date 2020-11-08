@@ -7,5 +7,6 @@ export const ACTIONS = [
   "eats",
   "creates bugs",
   "fixes bugs",
+  "loves sushi",
   "sleeps",
 ];
