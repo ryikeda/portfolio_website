@@ -1,11 +1,25 @@
 import React from "react";
-import { Typography } from "@material-ui/core";
+import { Box, Typography, Link } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    marginTop: theme.spacing(6),
+    textAlign: "center",
+  },
+}));
 
 const Footer = () => {
+  const classes = useStyles();
   return (
-    <div>
-      <Typography color="textPrimary">This is the footer</Typography>
-    </div>
+    <Box className={classes.root}>
+      <Typography variant="body1" color="textPrimary">
+        &copy; {new Date().getFullYear()} Code hosted on
+      </Typography>
+      <Link href="https://github.com/ryikeda/" rel="noopener" target="_blank">
+        Github
+      </Link>
+    </Box>
   );
 };
 
