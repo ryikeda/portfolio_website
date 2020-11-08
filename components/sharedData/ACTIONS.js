@@ -1,4 +1,4 @@
-export const TEXTS = [
+export const ACTIONS = [
   "codes",
   "makes websites",
   "makes mistakes",

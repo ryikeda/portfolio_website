@@ -3,7 +3,7 @@ import { Box, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import dynamic from "next/dynamic";
 import { config } from "react-spring";
-import { TEXTS } from "./sharedData/TEXT";
+import { ACTIONS } from "./sharedData/ACTIONS";
 
 const TextTransition = dynamic(() => import("react-text-transition"), {
   ssr: false,
@@ -28,16 +28,18 @@ const Header = () => {
   }, []);
 
   return (
-    <Box className={classes.root}>
-      <Typography variant="h2" color="textPrimary">
-        Rafael{" "}
-        <TextTransition
-          text={TEXTS[index % TEXTS.length]}
-          springConfig={config.gentle}
-          style={{ display: "inline-block" }}
-        />
-      </Typography>
-    </Box>
+    <>
+      <Box component="div" className={classes.root}>
+        <Typography variant="h2" color="textPrimary">
+          Rafael{" "}
+          <TextTransition
+            text={ACTIONS[index % ACTIONS.length]}
+            springConfig={config.gentle}
+            style={{ display: "inline-block" }}
+          />
+        </Typography>
+      </Box>
+    </>
   );
 };
 
