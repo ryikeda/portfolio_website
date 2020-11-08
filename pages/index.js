@@ -1,6 +1,12 @@
 import Layout from "../components/Layout";
-import styles from "../styles/Home.module.css";
-
+import { Container, Typography } from "@material-ui/core";
+import Header from "../components/Header";
 export default function Home() {
-  return <Layout>This is the content</Layout>;
+  return (
+    <Layout>
+      <Container>
+        <Header />
+      </Container>
+    </Layout>
+  );
 }
