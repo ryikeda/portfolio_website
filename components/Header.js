@@ -17,6 +17,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(5),
     color: theme.palette.grey[600],
   },
+  textTransition: {
+    display: "inline-block",
+  },
 }));
 const Header = () => {
   const classes = useStyles();
@@ -39,7 +42,7 @@ const Header = () => {
           <TextTransition
             text={ACTIONS[index % ACTIONS.length]}
             springConfig={config.gentle}
-            style={{ display: "inline-block" }}
+            className={classes.textTransition}
           />
         </Typography>
         <Box component="div" className={classes.headerText}>
