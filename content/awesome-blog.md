@@ -4,52 +4,49 @@ date: "2020-10-01"
 author:
   github: "ryikeda"
   name: "Rafael Ikeda"
+description: "This is a test post"
 ---
 
-A breakdown of GrubGuide's serverless architecture
+## Getting Started
 
----
+First, run the development server:
 
-# Iuventae ego numero acumine raptaeque
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-## Novitasque quoque desuetudine data sororem cum tuo
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Lorem markdownum frusta fallere erat frena sub; conveniet referat mulcet
-reperire. Agitare trahi te dum quae cum secutis illas et Oliaros dubitare
-absens; foedantem Heliadum levis mensam. Lacerata Mareoticaque amorem. **Nostris
-quod**. Sua sacros proximus te velimus, vocatur serpentum.
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-Eoo cedere **cognita** nullaque usu quoque et amictus quid volucres nymphe, deo
-_morsibus_. Doloris metu Delius ambo Dixit cruoris Liriope praetemptanda neque
-visae, et densas mecum. Ductus partes arma, vincinaque violasse!
+## Learn More
 
-    ieee(virtualizationCyberbullying.mips_variable_risc.optical_boot_oem(
-            tag_mac_ray, windowsFile - 5), 92);
-    var deviceKbps = cookie_site(https_ip);
-    var ole = reciprocalTweakToggle;
+To learn more about Next.js, take a look at the following resources:
 
-## Examina velant labefactum est
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Certamine audiat [pronus](http://petii.com/invos.html) aurea, late quae, et tam
-illi vasto somno Phyleus Halcyoneus. Sensit vellet altaria monte; in urbe
-haesissem! Custos quam opus casu te mersis ducit haec protectum quae. Sua vidi
-non primordia sanguine recto, non forti crudelis adoratis et radix semperque at
-ebur. Rotae confessasque velocius Hectoris me videt.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-    ddr_midi = lionRay.nonMirrored(acl) - url * cron_emoticon_lion - 4;
-    var link_clip_sound = process_archive_toggle(javascript_ray_source,
-            isdnSuffixJava.wimaxHover(post, hdmi, -5) + hover);
-    plugBaudPostscript.signatureCloud(rich_interactive, blu + interlaced,
-            graphicRpc);
+## Deploy on Vercel
 
-Erat nec truncus Ulixem aequoribus ora; ubi removi coniungere femina cum, et
-**ostendens**. Anser natos eque quoque pes. Ut rebus vale nomenque sanguine.
-Quam mens te retia Methymnaeae foret stillataque lancea Hercule autumni
-utilibus, potentia lanigerosve in possunt illae ait.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Praecluserat annum ultima, celsum ruricolae, auditis est Inachus esse
-[moenia](http://navitsuis.net/), non est suo nomine! Aquarum ibat populique
-nympha est iam fuerat, viroque ad Ityn. Quisquis ritu, amne non, et sic, non
-contraque tollens caesae discedere puppes: dedit. Est Cycnum; novoque periuraque
-errorem! Quosque illo amici nostras ut caelestia tibi, _sidera fugerat_, alumnus
-partim mater odoriferae laborem gente sed amat.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+```jsx
+import Layout from "../components/Layout";
+import Header from "../components/Header";
+import Skills from "../components/Skills";
+
+export default function About() {
+  return (
+    <Layout>
+      <Header isAbout />
+      <Skills />
+    </Layout>
+  );
+}
+```

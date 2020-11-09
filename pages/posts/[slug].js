@@ -1,25 +1,31 @@
 import React from "react";
 import matter from "gray-matter";
-import { Box, Grid, Typography } from "@material-ui/core";
+import { Box, Typography, Grid, Link } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-import ReactMarkdown from "react-markdown";
 
+import Markdown from "../../components/Markdown";
 import Layout from "../../components/Layout";
+
+import formatDate from "../../helpers/formatDate";
 
 const useStyles = makeStyles((theme) => ({
   root: {},
+  container: {
+    display: "flex",
+    alignItems: "center",
+  },
   avatar: {
     borderRadius: "50%",
     border: "2px #3f51b5 solid",
     padding: "3px",
-    marginTop: "20px",
   },
 }));
 
 const Post = ({ content, data }) => {
   const classes = useStyles();
   const frontmatter = data;
-  const { title, author } = frontmatter;
+  const { title, author, date, description } = frontmatter;
+
   const avatar = `https://images.weserv.nl/?url=https://unavatar.now.sh/github/${author.github}&w=40`;
 
   return (
@@ -29,14 +35,22 @@ const Post = ({ content, data }) => {
           {title}
         </Typography>
       </Box>
+      <Box mt={3}>
+        <Typography
+          className={classes.container}
+          variant="body2"
+          color="textPrimary"
+        >
+          <img src={avatar} className={classes.avatar} />{" "}
+          <Box ml={1}>
+            by {author.name} on {formatDate(date)}
+          </Box>
+        </Typography>
+      </Box>
 
-      <img src={avatar} className={classes.avatar} />
-      <Typography variant="body1" color="textPrimary">
-        by {author.name}
-      </Typography>
-      <Typography variant="body1" color="textPrimary">
-        <ReactMarkdown source={content} escapeHtml={false} />
-      </Typography>
+      <Box mt={5}>
+        <Markdown>{content}</Markdown>
+      </Box>
     </Layout>
   );
 };
