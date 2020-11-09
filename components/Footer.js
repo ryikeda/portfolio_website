@@ -17,7 +17,7 @@ const Footer = () => {
         &copy; {new Date().getFullYear()} Code hosted on
       </Typography>
       <Link href="https://github.com/ryikeda/" rel="noopener" target="_blank">
-        Github
+        <Typography variant="body1">Github</Typography>
       </Link>
     </Box>
   );
