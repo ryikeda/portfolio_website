@@ -1,0 +1,26 @@
+export const DAILY_STACK = [
+  "React",
+  "Next.js",
+  "Node.js",
+  "MariaDB",
+  "MongoDB",
+  "Google Cloud",
+];
+export const FAMILIAR_TECH = [
+  "Git",
+  "Javascript",
+  "HTML5",
+  "CSS3",
+  "Bootstrap",
+  "Material Design",
+  "PHP",
+  "Python",
+  "Flask",
+  "CodeIgniter",
+  "PostgreSQL",
+  "JSON Web Tokens",
+  "Heroku",
+  "Netlify",
+  "Amazon AWS",
+  "Travis CI",
+];

@@ -4,13 +4,15 @@ import { Box, makeStyles } from "@material-ui/core";
 
 const Icon = ({ type, width }) => {
   const icon = simpleIcons.get(type);
-  console.dir(icon);
+  let fill;
+
   const useStyles = makeStyles((theme) => ({
     root: {
       width,
-      fill: `#${icon.hex}`,
+      fill: icon.hex === "000000" ? theme.palette.text.primary : `#${icon.hex}`,
       display: "inline-block",
       margin: "0 3px",
+      textAlign: "center",
     },
   }));
 

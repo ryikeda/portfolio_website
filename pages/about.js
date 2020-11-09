@@ -1,11 +1,12 @@
 import Layout from "../components/Layout";
 import Header from "../components/Header";
-import Projects from "../components/Projects";
-export default function Home() {
+import Skills from "../components/Skills";
+
+export default function About() {
   return (
     <Layout>
-      <Header isHomepage />
-      <Projects />
+      <Header isAbout />
+      <Skills />
     </Layout>
   );
 }
