@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
     padding: theme.spacing(0.4),
     borderRadius: theme.spacing(0.5),
+    marginLeft: theme.spacing(0.3),
     "&:hover": {
       backgroundColor: theme.palette.text.primary,
       color: theme.palette.background.default,
@@ -70,7 +71,6 @@ const Navbar = ({ mode, setMode }) => {
           direction="row"
           justify="flex-start"
           alignItems="center"
-          spacing={1}
         >
           <Grid item>
             <Link href="/" as="/">
