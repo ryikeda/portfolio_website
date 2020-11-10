@@ -1,7 +1,8 @@
 import React from "react";
 import { Box, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { PROJECTS } from "./sharedData/PROJECTS";
+import { PROJECTS, HP_PROJECTS } from "./sharedData/PROJECTS";
+
 import ProjectCard from "./ProjectCard";
 
 const useStyles = makeStyles((theme) => ({
@@ -13,11 +14,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Projects = () => {
+const Projects = ({ isHomepage }) => {
+  let source = PROJECTS;
+  if (isHomepage) source = HP_PROJECTS;
+
   const classes = useStyles();
   return (
     <Box className={classes.root}>
-      <Typography variant="h5">Recent Projects</Typography>
+      <Typography variant="h5">
+        {isHomepage ? "Recent Projects" : "Projects"}
+      </Typography>
       <Grid
         container
         direction="row"
@@ -26,7 +32,7 @@ const Projects = () => {
         spacing={2}
         className={classes.projectsContainer}
       >
-        {PROJECTS.map((proj, i) => (
+        {source.map((proj, i) => (
           <ProjectCard data={proj} key={i} />
         ))}
       </Grid>
