@@ -21,6 +21,5 @@ export const FAMILIAR_TECH = [
   "JSON Web Tokens",
   "Heroku",
   "Netlify",
-  "Amazon AWS",
   "Travis CI",
 ];
