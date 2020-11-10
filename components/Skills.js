@@ -6,7 +6,7 @@ import Icon from "./Icon";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: theme.spacing(3),
+    marginTop: theme.spacing(5),
   },
   container: {
     marginTop: theme.spacing(2),
@@ -31,10 +31,8 @@ const Skills = () => {
         {DAILY_STACK.map((skill, i) => (
           <Grid
             item
-            xs={6}
-            sm={4}
-            md={3}
-            lg={2}
+            xs={4}
+            sm={2}
             container
             direction="column"
             justify="center"
@@ -62,10 +60,8 @@ const Skills = () => {
           {FAMILIAR_TECH.map((skill, i) => (
             <Grid
               item
-              xs={6}
-              sm={4}
-              md={3}
-              lg={2}
+              xs={4}
+              sm={2}
               container
               direction="column"
               justify="center"

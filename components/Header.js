@@ -53,7 +53,7 @@ const Header = ({ isHomepage, isAbout }) => {
             </Typography>
           </Box>
         ) : null}
-        {isAbout ? (
+        {/* {isAbout ? (
           <Box component="div" mt={5}>
             <Typography variant="h5" color="textPrimary">
               A bit more about me...
@@ -69,7 +69,7 @@ const Header = ({ isHomepage, isAbout }) => {
               application.
             </Typography>
           </Box>
-        ) : null}
+        ) : null} */}
       </Box>
     </>
   );
