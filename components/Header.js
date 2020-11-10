@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.grey[600],
   },
 }));
-const Header = ({ isHomepage, isAbout }) => {
+const Header = ({ isHomepage, isStatic }) => {
   const classes = useStyles();
   const [index, setIndex] = useState(0);
 
@@ -34,14 +34,21 @@ const Header = ({ isHomepage, isAbout }) => {
   return (
     <>
       <Box component="div" className={classes.root}>
-        <Typography variant="h2" color="textPrimary">
-          Rafael{" "}
-          <TextTransition
-            text={ACTIONS[index % ACTIONS.length]}
-            springConfig={config.gentle}
-            style={{ display: "inline-block" }}
-          />
-        </Typography>
+        {isStatic ? (
+          <Typography variant="h2" color="textPrimary">
+            Rafael Ikeda
+          </Typography>
+        ) : (
+          <Typography variant="h2" color="textPrimary">
+            Rafael{" "}
+            <TextTransition
+              text={ACTIONS[index % ACTIONS.length]}
+              springConfig={config.gentle}
+              style={{ display: "inline-block" }}
+            />
+          </Typography>
+        )}
+
         {isHomepage ? (
           <Box component="div" className={classes.headerText}>
             <Typography variant="h6">
@@ -53,23 +60,6 @@ const Header = ({ isHomepage, isAbout }) => {
             </Typography>
           </Box>
         ) : null}
-        {/* {isAbout ? (
-          <Box component="div" mt={5}>
-            <Typography variant="h5" color="textPrimary">
-              A bit more about me...
-            </Typography>
-            <Typography variant="h6" className={classes.headerText}>
-              I spent my childhood in Brazil, my teen years in Japan and I went
-              to the USA for a college degree. By living and working in such
-              different environments I found myself having to adapt to
-              situations that most people will never have the chance to
-              experience. It can be stressful sometimes, however, all those
-              experiences allowed me to have a unique perspective on problem
-              solving, which can be very helpful when developing a new
-              application.
-            </Typography>
-          </Box>
-        ) : null} */}
       </Box>
     </>
   );
