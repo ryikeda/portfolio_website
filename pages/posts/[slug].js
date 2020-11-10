@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "50%",
     border: "2px #3f51b5 solid",
     padding: "3px",
+    width: "70px",
   },
 }));
 
@@ -26,7 +27,7 @@ const Post = ({ content, data }) => {
   const frontmatter = data;
   const { title, author, date, description } = frontmatter;
 
-  const avatar = `https://images.weserv.nl/?url=https://unavatar.now.sh/github/${author.github}&w=40`;
+  const avatar = "/images/avatar.jpg";
 
   return (
     <Layout>
