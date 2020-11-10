@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Navbar = ({ mode, setMode }) => {
+const Navbar = ({ mode, switchMode }) => {
   const classes = useStyles();
 
   const menu = [
@@ -50,11 +50,6 @@ const Navbar = ({ mode, setMode }) => {
       name: "3.PROJECTS",
     },
   ];
-
-  const switchMode = () => {
-    const setTo = mode === "dark" ? "light" : "dark";
-    setMode(setTo);
-  };
 
   return (
     <Box className={classes.root}>
