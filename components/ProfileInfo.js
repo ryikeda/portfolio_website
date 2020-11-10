@@ -16,12 +16,8 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(3),
     color: theme.palette.grey[600],
   },
-  card: {
+  img: {
     width: "100%",
-  },
-  media: {
-    height: 0,
-    paddingTop: "56.25%", // 16:9
   },
 }));
 
@@ -43,11 +39,7 @@ const ProfileInfo = () => {
       </Typography>
       <Box mt={3}>
         <Card className={classes.card}>
-          <CardMedia
-            className={classes.media}
-            image="/images/beach.jpg"
-            title="Beach"
-          />
+          <img src="/images/beach.jpg" className={classes.img}></img>
         </Card>
       </Box>
     </Box>

@@ -1,6 +1,6 @@
 import React from "react";
 import matter from "gray-matter";
-import { Box, Typography, Grid, Link } from "@material-ui/core";
+import { Box, Typography, Divider } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 
 import Markdown from "../../components/Markdown";
@@ -35,7 +35,7 @@ const Post = ({ content, data }) => {
           {title}
         </Typography>
       </Box>
-      <Box mt={3}>
+      <Box mt={3} mb={3}>
         <Typography
           className={classes.container}
           variant="body2"
@@ -47,8 +47,8 @@ const Post = ({ content, data }) => {
           </Box>
         </Typography>
       </Box>
-
-      <Box mt={5}>
+      <Divider />
+      <Box mt={2}>
         <Markdown>{content}</Markdown>
       </Box>
     </Layout>

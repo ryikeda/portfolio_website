@@ -16,6 +16,7 @@ import {
   TableRow,
   TableCell,
   TableBody,
+  Card,
 } from "@material-ui/core";
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -39,6 +40,9 @@ const styles = (theme) => ({
   [theme.palette.type]: {
     type: theme.palette.type,
   },
+  image: {
+    width: "100%",
+  },
 });
 
 const MarkdownParagraph = withStyles(styles)(({ classes, ...props }) => {
@@ -61,6 +65,13 @@ const MarkdownList = withStyles(styles)(({ classes, ...props }) => {
   );
 });
 
+const MarkdownImage = withStyles(styles)(({ classes, ...props }) => {
+  return (
+    <Card>
+      <img src={props.src} alt={props.alt} className={classes.image}></img>
+    </Card>
+  );
+});
 const MarkdownListItem = withStyles(styles)(({ classes, ...props }) => {
   return <Typography component="li">{props.children}</Typography>;
 });
@@ -147,6 +158,7 @@ const renderers = {
   list: MarkdownList,
   listItem: MarkdownListItem,
   code: MarkdownCode,
+  image: MarkdownImage,
   table: MarkdownTable,
   tableHead: MarkdownTableHead,
   tableBody: MarkdownTableBody,
