@@ -19,7 +19,7 @@ const Blog = ({ content }) => {
   const classes = useStyles();
   return (
     <Layout>
-      <Header />
+      <Header isStatic />
       <Box mt={5}>
         <Grid
           container

@@ -5,7 +5,7 @@ export const SOCIAL_LINKS = [
   },
   {
     name: "LinkedIn",
-    url: "https://github.com/ryikeda",
+    url: "https://www.linkedin.com/in/rafael-ikeda/",
   },
   {
     name: "Twitter",

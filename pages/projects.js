@@ -1,12 +1,15 @@
+import React from "react";
 import Layout from "../components/Layout";
 import Header from "../components/Header";
 import Projects from "../components/Projects";
 
-export default function Home() {
+const ProjectsPage = () => {
   return (
     <Layout>
-      <Header isHomepage />
-      <Projects isHomepage />
+      <Header isStatic />
+      <Projects source="PROJECTS" />
     </Layout>
   );
-}
+};
+
+export default ProjectsPage;
