@@ -1,5 +1,5 @@
 ---
-title: "New Post alkjclka sclka cjklha skjckjas"
+title: "Sample Post"
 date: "2020-08-01"
 author:
   github: "ryikeda"

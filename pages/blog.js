@@ -13,6 +13,14 @@ const useStyles = makeStyles((theme) => ({
   date: {
     color: theme.palette.grey[600],
   },
+  link: {
+    cursor: "pointer",
+  },
+  title: {
+    "&:hover": {
+      color: theme.palette.primary.main,
+    },
+  },
 }));
 
 const Blog = ({ content }) => {
@@ -35,11 +43,15 @@ const Blog = ({ content }) => {
 
             return (
               <Link href={`/posts/${slug}`} key={slug}>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={6} className={classes.link}>
                   <Typography variant="body2" className={classes.date}>
                     {formatDate(date)}
                   </Typography>
-                  <Typography variant="h6" color="textPrimary">
+                  <Typography
+                    variant="h6"
+                    color="textPrimary"
+                    className={classes.title}
+                  >
                     {title}
                   </Typography>
                 </Grid>
