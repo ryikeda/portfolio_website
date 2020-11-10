@@ -6,6 +6,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(6),
     textAlign: "center",
+    padding: theme.spacing(3),
   },
 }));
 
