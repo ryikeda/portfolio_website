@@ -42,7 +42,7 @@ const Post = ({ content, data }) => {
           color="textPrimary"
         >
           <img src={avatar} className={classes.avatar} />{" "}
-          <Box ml={1}>
+          <Box component="span" ml={1}>
             by {author.name} on {formatDate(date)}
           </Box>
         </Typography>

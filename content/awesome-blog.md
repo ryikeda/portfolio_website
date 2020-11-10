@@ -32,6 +32,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
+1. First item
+2. Second item
+3. Third item
+   1. Indented item
+   2. Indented item
+4. Fourth item
+   &nbsp;
+
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
@@ -50,3 +58,30 @@ export default function About() {
   );
 }
 ```
+
+- This is the first list item.
+- Here's the second list item.
+
+  > A blockquote would look great below the second list item.
+
+##
+
+- And here's the third list item.
+
+##
+
+`` Use `code` in your Markdown file. ``
+
+##
+
+---
+
+##
+
+<https://www.markdownguide.org>
+
+<fake@example.com>
+
+I love supporting the **[EFF](https://eff.org)**.  
+This is the _[Markdown Guide](https://www.markdownguide.org)_.  
+See the section on [`code`](#code).
