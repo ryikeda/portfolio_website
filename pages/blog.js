@@ -1,18 +1,83 @@
 import React from "react";
 import matter from "gray-matter";
 import Link from "next/link";
-import { Grid } from "@material-ui/core";
+import { Box, Grid, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+
+import { formatDate } from "../helpers";
 
 import Layout from "../components/Layout";
+import Header from "../components/Header";
 
-const Blog = ({ title }) => {
-  return <Layout>{title}</Layout>;
+const useStyles = makeStyles((theme) => ({
+  date: {
+    color: theme.palette.grey[600],
+  },
+}));
+
+const Blog = ({ content }) => {
+  const classes = useStyles();
+  return (
+    <Layout>
+      <Header />
+      <Box mt={5}>
+        <Grid
+          container
+          direction="row"
+          justify="flex-start"
+          alignItems="center"
+          spacing={6}
+        >
+          {content.map(({ document, slug }) => {
+            const {
+              data: { title, date },
+            } = document;
+
+            return (
+              <Link href={`/posts/${slug}`}>
+                <Grid item xs={12} sm={6}>
+                  <Typography variant="body2" className={classes.date}>
+                    {formatDate(date)}
+                  </Typography>
+                  <Typography variant="h6" color="textPrimary">
+                    {title}
+                  </Typography>
+                </Grid>
+              </Link>
+            );
+          })}
+        </Grid>
+      </Box>
+    </Layout>
+  );
 };
 
-Blog.getInitialProps = async (ctx) => {
-  const { slug } = ctx.query;
+Blog.getInitialProps = async (context) => {
+  const content = ((context) => {
+    const keys = context.keys();
+    const values = keys.map(context);
+    const data = keys.map((key, index) => {
+      const slug = key
+        .replace(/^.*[\\\/]/, "")
+        .split(".")
+        .slice(0, -1)
+        .join(".");
+      const value = values[index];
+      const document = matter(value.default);
+      return { document, slug };
+    });
 
-  return { slug };
+    return data
+      .slice()
+      .sort(
+        (a, b) =>
+          new Date(b.document.data.date) - new Date(a.document.data.date)
+      );
+  })(require.context("../content", true, /\.md$/));
+
+  return {
+    content,
+  };
 };
 
 export default Blog;

@@ -1,4 +1,6 @@
-export const ACTIONS = [
+import { shuffle } from "../../helpers";
+
+export const ACTIONS = shuffle([
   "codes",
   "makes websites",
   "makes mistakes",
@@ -9,4 +11,4 @@ export const ACTIONS = [
   "fixes bugs",
   "loves sushi",
   "sleeps",
-];
+]);

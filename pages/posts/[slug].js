@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/styles";
 import Markdown from "../../components/Markdown";
 import Layout from "../../components/Layout";
 
-import formatDate from "../../helpers/formatDate";
+import { formatDate } from "../../helpers";
 
 const useStyles = makeStyles((theme) => ({
   root: {},
