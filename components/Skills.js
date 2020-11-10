@@ -48,7 +48,7 @@ const Skills = () => {
       </Grid>
       <Box mt={5}>
         <Typography variant="h5" color="textPrimary">
-          Familiar technogies
+          Familiar technologies
         </Typography>
         <Grid
           container
