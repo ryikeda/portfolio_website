@@ -31,7 +31,7 @@ const SocialLinks = () => {
           >
             {SOCIAL_LINKS.map(({ name, url }) => {
               return (
-                <Link href={url} rel="noopener" target="_blank">
+                <Link href={url} rel="noopener" target="_blank" key={name}>
                   <Grid
                     item
                     xs={4}

@@ -34,7 +34,7 @@ const Blog = ({ content }) => {
             } = document;
 
             return (
-              <Link href={`/posts/${slug}`}>
+              <Link href={`/posts/${slug}`} key={slug}>
                 <Grid item xs={12} sm={6}>
                   <Typography variant="body2" className={classes.date}>
                     {formatDate(date)}

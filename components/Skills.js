@@ -37,8 +37,9 @@ const Skills = () => {
             direction="column"
             justify="center"
             alignItems="center"
+            key={i + 100}
           >
-            <Icon type={skill} width={30} key={i} />
+            <Icon type={skill} width={30} />
             <Typography component="span" variant="body2" color="textPrimary">
               {skill}
             </Typography>
@@ -66,8 +67,9 @@ const Skills = () => {
               direction="column"
               justify="center"
               alignItems="center"
+              key={i + 200}
             >
-              <Icon type={skill} width={30} key={i} />
+              <Icon type={skill} width={30} />
               <Typography component="span" variant="body2" color="textPrimary">
                 {skill}
               </Typography>
