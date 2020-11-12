@@ -21,7 +21,7 @@ const Projects = ({ isHomepage }) => {
   const classes = useStyles();
   return (
     <Box className={classes.root}>
-      <Typography variant="h5">
+      <Typography variant="h5" color="textPrimary">
         {isHomepage ? "Recent Projects" : "Projects"}
       </Typography>
       <Grid

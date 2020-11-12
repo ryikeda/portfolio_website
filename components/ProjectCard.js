@@ -17,7 +17,12 @@ const ProjectCard = ({ data: { name, title, description, techStack } }) => {
         <Card square>
           <CardActionArea>
             <CardContent>
-              <Typography gutterBottom variant="h6" component="h2">
+              <Typography
+                gutterBottom
+                variant="h6"
+                component="h2"
+                color="textPrimary"
+              >
                 {" "}
                 {title}
               </Typography>
