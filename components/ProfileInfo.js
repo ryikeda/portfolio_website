@@ -1,14 +1,6 @@
 import React from "react";
-import Image from "next/image";
-import {
-  Box,
-  Container,
-  Typography,
-  Avatar,
-  CardMedia,
-  Card,
-  CardContent,
-} from "@material-ui/core";
+
+import { Box, Typography, Card } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -29,13 +21,16 @@ const ProfileInfo = () => {
         A bit more about me...
       </Typography>
       <Typography variant="h6" className={classes.headerText}>
-        I spent my childhood in Brazil, my teen years in Japan and I went to the
-        USA for a college degree. By living and working in such different
-        environments I found myself having to adapt to situations that most
-        people will never have the chance to experience. It can be stressful
-        sometimes, however, all those experiences allowed me to have a unique
-        perspective on problem solving, which can be very helpful when
-        developing a new application.
+        <p>
+          I spent my childhood in Brazil, my teen years in Japan and I went to
+          the USA for my college degree. Nowadays, I live in Japan where I work
+          as a software engineer.
+        </p>
+        <p>
+          When I’m not coding or studying I usually hang out with my one year
+          old son and my wife. I also like to play the guitar or watch a movie
+          to relax.
+        </p>
       </Typography>
       <Box mt={3}>
         <Card className={classes.card}>

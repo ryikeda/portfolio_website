@@ -2,9 +2,9 @@ export const DAILY_STACK = [
   "React",
   "Next.js",
   "Node.js",
-  "MariaDB",
+  "PostgreSQL",
   "MongoDB",
-  "Google Cloud",
+  "Heroku",
 ];
 export const FAMILIAR_TECH = [
   "Git",

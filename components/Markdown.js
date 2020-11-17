@@ -187,7 +187,7 @@ const renderers = {
   list: MarkdownList,
   listItem: MarkdownListItem,
   code: MarkdownCode,
-  image: MarkdownImage,
+  // image: MarkdownImage,
   thematicBreak: MarkdownHr,
   blockquote: MarkdownBlockquote,
   table: MarkdownTable,
