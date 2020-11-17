@@ -19,7 +19,11 @@ const Footer = () => {
       <Typography component="span" variant="body1" color="textPrimary">
         &copy; {new Date().getFullYear()} Code hosted on&nbsp;
       </Typography>
-      <Link href="https://github.com/ryikeda/" rel="noopener" target="_blank">
+      <Link
+        href="https://github.com/ryikeda/portfolio_website"
+        rel="noopener"
+        target="_blank"
+      >
         <Typography component="span" variant="body1">
           Github
         </Typography>
