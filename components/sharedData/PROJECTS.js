@@ -75,7 +75,7 @@ export const PROJECTS = [
     techStack: ["Python", "Jinja", "Bootstrap", "Flask", "Redis", "Heroku"],
   },
   {
-    name: "netclone",
+    name: "net-clone",
     title: "Netflix Clone",
     description:
       "This page was created with react. The data comes from themoviedb.org API.",
@@ -84,7 +84,7 @@ export const PROJECTS = [
     techStack: ["HTML5", "CSS3", "Javascript", "React"],
   },
   {
-    name: "hackerClone",
+    name: "hacker-clone",
     title: "Hacker News Clone",
     description:
       "The user can create and account or login to share links with other users.",
